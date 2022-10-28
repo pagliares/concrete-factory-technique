@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AccountingSystem">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/AccountingSystem.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
