@@ -7,8 +7,8 @@ package controllers;
 public class TestControllers {
 
     public static void main(String[] args) {
-        //  testAccountingController();
-        //  testInventoryController();
+        testAccountingController();
+        testInventoryController();
         testRegister();
     }
 
@@ -32,6 +32,16 @@ public class TestControllers {
         register.createAccountingAdapter("IBM");
         register.registerSaleAtAccountingSystem();
 
+        System.out.println("Testing the integration of Register Controller and SAP Inventory System");
+        register.createInventoryAdapter("SAP");
+        register.decreaseItemQuantity();
+
+        System.out.println("Testing the integration of Register Controller and SAP Accounting System");
+        register.createAccountingAdapter("SAP");
+        register.registerSaleAtAccountingSystem();
+
+
+
 
     }
 
@@ -47,6 +57,10 @@ public class TestControllers {
         inventoryController.createInventoryAdapter("IBM");
         inventoryController.updateInventory();
 
+        System.out.println("Testing the integration of Inventory Controller and SAP Inventory System");
+        inventoryController.createInventoryAdapter("SAP");
+        inventoryController.updateInventory();
+
     }
 
     public static void testAccountingController() {
@@ -59,6 +73,10 @@ public class TestControllers {
 
         System.out.println("Testing the integration of Accounting Controller and IBM Accounting System");
         accountingController.createAccountingAdapter("IBM");
+        accountingController.calculateTax();
+
+        System.out.println("Testing the integration of Accounting Controller and SAP Accounting System");
+        accountingController.createAccountingAdapter("SAP");
         accountingController.calculateTax();
 
     }

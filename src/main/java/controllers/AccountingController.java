@@ -2,6 +2,7 @@ package controllers;
 
 import adapters.AccountingAdapterIBM;
 import adapters.AccountingAdapterItautec;
+import adapters.AccountingAdapterSAP;
 import adapters.IAccountingAdapter;
 
 /**
@@ -20,6 +21,8 @@ public class AccountingController {
             accountingAdapter = new AccountingAdapterIBM();
         } else if (name.equals("Itautec")) {
             accountingAdapter = new AccountingAdapterItautec();
+        } else if (name.equals("SAP")){
+            accountingAdapter = new AccountingAdapterSAP();
         }
     }
 

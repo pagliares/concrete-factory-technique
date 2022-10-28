@@ -19,6 +19,8 @@ public class Register {
             accountingAdapter = new AccountingAdapterIBM();
         } else if (name.equals("Itautec")){
             accountingAdapter = new AccountingAdapterItautec();
+        } else if (name.equals("SAP")){
+            accountingAdapter = new AccountingAdapterSAP();
         }
     }
 
@@ -27,6 +29,8 @@ public class Register {
             inventoryAdapter = new InventoryAdapterIBM();
         } else if (name.equals("Itautec")){
             inventoryAdapter = new InventoryAdapterItautec();
+        } else if (name.equals("SAP")){
+            inventoryAdapter = new InventoryAdapterSAP();
         }
     }
 
