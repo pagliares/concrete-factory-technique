@@ -17,3 +17,11 @@ During the class, I start witn an initial working solution (with a bad solution 
 I flagged this initial version with the git tag named 'v1.0'. If you want you can checkout this specific version of the repository (after cloning the repository to you local machine) by issuing the command:
 
 git checkout v1.0
+
+### 02 - Second version (v2.0)
+
+This version includes support for SAP inventory and accounting systems, although the solution is highly coupled (We had to update all 3 controllers to support SAP systems, duplicating the code responsible for object creation.
+
+I flagged this second version with the git tag named 'v2.0'. If you want you can checkout this specific version of the repository (after cloning the repository to you local machine) by issuing the command:
+
+git checkout v2.0
