@@ -7,31 +7,21 @@ import adapters.*;
  * @author Rodrigo Martins Pagliares
  */
 public class Register {
-    private IInventoryAdapter inventoryAdapter;
-    private IAccountingAdapter accountingAdapter;
+    private InventoryAdapter inventoryAdapter;
+    private AccountingAdapter accountingAdapter;
+    private AdapterFactory factory;
 
     public Register() {
         System.out.println("Register Controller Created \n");
+        factory = AdapterFactory.getInstance();
     }
 
     public void createAccountingAdapter(String name){
-        if (name.equals("IBM")) {
-            accountingAdapter = new AccountingAdapterIBM();
-        } else if (name.equals("Itautec")){
-            accountingAdapter = new AccountingAdapterItautec();
-        } else if (name.equals("SAP")){
-            accountingAdapter = new AccountingAdapterSAP();
-        }
+        accountingAdapter = factory.createAccountingAdapter(name);
     }
 
     public void createInventoryAdapter(String name){
-        if (name.equals("IBM")) {
-            inventoryAdapter = new InventoryAdapterIBM();
-        } else if (name.equals("Itautec")){
-            inventoryAdapter = new InventoryAdapterItautec();
-        } else if (name.equals("SAP")){
-            inventoryAdapter = new InventoryAdapterSAP();
-        }
+        inventoryAdapter = factory.createInventoryAdapter(name);
     }
 
     public void decreaseItemQuantity() {

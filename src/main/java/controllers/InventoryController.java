@@ -1,29 +1,22 @@
 package controllers;
 
-import adapters.IInventoryAdapter;
-import adapters.InventoryAdapterIBM;
-import adapters.InventoryAdapterItautec;
-import adapters.InventoryAdapterSAP;
+import adapters.*;
 
 /**
  * @author Rodrigo Martins Pagliares
  */
 public class InventoryController {
 
-    private IInventoryAdapter inventoryAdapter;
+    private InventoryAdapter inventoryAdapter;
+    private AdapterFactory factory;
 
     public InventoryController() {
         System.out.println("Inventory Controller Created \n");
+        factory = AdapterFactory.getInstance();
     }
 
     public void createInventoryAdapter(String name) {
-        if (name.equals("IBM")) {
-            inventoryAdapter = new InventoryAdapterIBM();
-        } else if (name.equals("Itautec")){
-            inventoryAdapter = new InventoryAdapterItautec();
-        } else if (name.equals("SAP")){
-            inventoryAdapter = new InventoryAdapterSAP();
-        }
+        inventoryAdapter = factory.createInventoryAdapter(name);
     }
 
     public void updateInventory() {

@@ -1,35 +1,26 @@
 package controllers;
 
-import adapters.AccountingAdapterIBM;
-import adapters.AccountingAdapterItautec;
-import adapters.AccountingAdapterSAP;
-import adapters.IAccountingAdapter;
+import adapters.*;
 
 /**
  * @author Rodrigo Martins Pagliares
  */
 
 public class AccountingController {
-    private IAccountingAdapter accountingAdapter;
+    private AccountingAdapter accountingAdapter;
+    private AdapterFactory factory;
 
     public AccountingController() {
         System.out.println("Accounting Controller Created");
+        factory = AdapterFactory.getInstance();
     }
 
     public void createAccountingAdapter(String name) {
-        if (name.equals("IBM")) {
-            accountingAdapter = new AccountingAdapterIBM();
-        } else if (name.equals("Itautec")) {
-            accountingAdapter = new AccountingAdapterItautec();
-        } else if (name.equals("SAP")){
-            accountingAdapter = new AccountingAdapterSAP();
-        }
+        accountingAdapter = factory.createAccountingAdapter(name);
     }
 
     public void calculateTax() {
         accountingAdapter.registerTax();
     }
-
-
 
 }
