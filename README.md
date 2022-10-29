@@ -28,7 +28,7 @@ git checkout v2.0
 
 ### 03 - Third version (v3.0)
 
-This is the final version of the example. It represents the evolution of the code by refactoring the second version of the example in order to decouple and centralize the creation of objects (adatpers for external systems in the example). In other words, this version encapsulates what varies (the creation of objects). It does this by creating a parameterized concrete factory, moving the duplicated code in the controllers to it.  support for SAP inventory and accounting systems, although the solution is highly coupled (We had to update all 3 controllers to support SAP systems, duplicating the code responsible for object creation.
+This is the final version of the example. It represents the evolution of the code by refactoring the second version of the example in order to decouple and centralize the creation of objects (adatpers for external systems in the example). In other words, this version encapsulates what varies (the creation of objects). It does this by creating a parameterized concrete factory, moving the duplicated code in the controllers to it.  
 
 This is the version you obtain just after cloning this repository. If you want to switch to version 1.0 or 2.0, use one of the commands bellow:
 
