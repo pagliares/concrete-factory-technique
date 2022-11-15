@@ -14,4 +14,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>xyz.pagliares</groupId>
+            <artifactId>AccountingSystem</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/AccountingSystem.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>xyz.pagliares</groupId>
+            <artifactId>InventorySystem</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/lib/InventorySystem.jar</systemPath>
+        </dependency>
+    </dependencies>
+
 </project>
