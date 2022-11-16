@@ -17,9 +17,9 @@ During the class, I start witn an initial working solution (with a bad solution 
 
 I flagged this initial version with the git tag named 'v1.0'. If you want you can checkout this specific version of the repository (after cloning the repository to you local machine) by issuing the command:
 
-git checkout v1.0
+<code>git checkout v1.0</code>
 
-To return to the final version (V3.0), type git checkout master
+To return to the final version (V3.0), type <code>git checkout master</code>
 
 ### 02 - Second version (v2.0)
 
@@ -27,9 +27,9 @@ This version includes support for SAP inventory and accounting systems, although
 
 I flagged this second version with the git tag named 'v2.0'. If you want you can checkout this specific version of the repository (after cloning the repository to you local machine) by issuing the command:
 
-git checkout v2.0
+<code>git checkout v2.0</code>
 
-To return to the final version (V3.0), type git checkout master
+To return to the final version (V3.0), type <code>git checkout master</code>
 
 ### 03 - Third version (v3.0)
 
@@ -37,8 +37,8 @@ This is the final version of the example. It represents the evolution of the cod
 
 This is the version you obtain just after cloning this repository. If you want to switch to version 1.0 or 2.0, use one of the commands bellow:
 
-git checkout v1.0
+<code>git checkout v1.0</code>
 
-git checkout v2.0
+<code>git checkout v2.0</code>
 
-To return to the final version (V3.0), type git checkout master
+To return to the final version (V3.0), type <code>git checkout master</code>
