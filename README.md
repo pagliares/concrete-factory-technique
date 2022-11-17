@@ -21,6 +21,10 @@ I flagged this initial version with the git tag named 'v1.0'. If you want you ca
 
 To return to the final version (V3.0), type <code>git checkout master</code>
 
+<p align="center">
+<img src="UML_Diagrams/Class_Diagram_Initial_Version.png" title="UML Class diagram for the first version" alt= "UML Class diagram for the first version">
+</p>
+
 ### 02 - Second version (v2.0)
 
 This version includes support for SAP inventory and accounting systems, although the solution is highly coupled (We had to update all 3 controllers to support SAP systems, duplicating the code responsible for object creation.
