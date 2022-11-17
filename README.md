@@ -35,6 +35,10 @@ To return to the final version (V3.0), type <code>git checkout master</code>
 
 This is the final version of the example. It represents the evolution of the code by refactoring the second version of the example in order to decouple and centralize the creation of objects (adatpers for external systems in the example). In other words, this version encapsulates what varies (the creation of objects). It does this by creating a parameterized concrete factory, moving the duplicated code in the controllers to it.  
 
+<p align="center">
+<img src="UML_Diagrams/Class_Diagram_Final_Version.png" title="UML Class diagram for the final version" alt= "UML Class diagram for the final version">
+</p>
+
 This is the version you obtain just after cloning this repository. If you want to switch to version 1.0 or 2.0, use one of the commands bellow:
 
 <code>git checkout v1.0</code>
